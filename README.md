@@ -1,1 +1,3 @@
-Humidity sensor
+An Arduino script for interacting with the DHT11 sensor in order to measure humidity and temperature. The data is sent over the serial port. Measurements are taken once a minute.
+
+The accompanying python script processes the floats through regex and plots them live using matplotlib. The plot is saved once an hour with a plot title of the covered interval, and a filename of the hour at which the recording started. 

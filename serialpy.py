@@ -42,13 +42,15 @@ while True:
         humid.append(h)
         temp.append(t)
         drawnow(plot)
-        plt.pause(1)
+        plt.pause(5)
 
         cnt = cnt+1
 
         if cnt == 60:
             now = datetime.datetime.now()
-            plt.suptitle('Status for ' + str(now.month) + '/' + str(now.day) + '/' + str(now.hour-1) +':'+str(now.minute) + '-' + str(now.hour))
+            plt.suptitle('Status for ' + str(now.month) + '/' + str(now.day) +
+                    '/' + str(now.hour-1) +':'+str(now.minute) + '-' + str(now.hour)+':' +
+                    str(now.minute))
             plt.savefig(str(now.month) + '-' + str(now.day) + '-' + str(now.hour))
             cnt = 0 
             h, t = [], []
